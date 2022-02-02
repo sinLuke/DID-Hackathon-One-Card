@@ -15,19 +15,7 @@ enum Alert {
     case error(error: Error?)
 }
 
-extension UIViewController: ViewModelDatagate {
-    @objc func showSucess(message: String) {
-        return
-    }
-    
-    @objc func showFailure(message: String) {
-        return
-    }
-    
-    func showResultPage(result: Any) {
-        return
-    }
-    
+extension UIViewController {
     func showAlert(alert: Alert, _ completion: (() -> ())? = nil) {
         var title = ""
         var message = ""
@@ -79,8 +67,8 @@ func elevation(from direction: simd_float3) -> Float {
 }
 
 protocol ViewModelDatagate: AnyObject {
-    func showResultPage(result: Any)
     func showSucess(message: String)
     func showFailure(message: String)
+    func showQRCode(url: URL)
 }
 

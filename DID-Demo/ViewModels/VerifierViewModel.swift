@@ -17,7 +17,7 @@ class VerifierViewModel: InteractiveViewMdoel {
         self.verifier = verifier
     }
 
-    override func trigger(didSession: DIDSession) {
+    override func trigger(didSession: DIDSession?) {
         let timerStart = Date()
         timer = Timer.scheduledTimer(withTimeInterval: 3, repeats: true, block: { _ in
             guard let response = self.response else { return }
@@ -56,15 +56,21 @@ class VerifierViewModel: InteractiveViewMdoel {
                     UIApplication.shared.showAlert(alert: .string(value: "Error when encode data"), nil)
                     return
                 }
-                try didSession.mcSession.send(encodedData, toPeers: [didSession.peer], with: .reliable)
+                if let didSession = didSession {
+                    try didSession.mcSession.send(encodedData, toPeers: [didSession.peer], with: .reliable)
+                } else {
+                    self.delegate?.showQRCode(url: result.url)
+                }
+                
             } catch {
                 UIApplication.shared.showAlert(alert: .error(error: error), nil)
             }
         } failure: { error in
             UIApplication.shared.showAlert(alert: .error(error: error), nil)
         }
-        
-        try? didSession.mcSession.send("Wait".data(using: .utf8)!, toPeers: [didSession.peer], with: .reliable)
+        if let didSession = didSession {
+            try? didSession.mcSession.send("Wait".data(using: .utf8)!, toPeers: [didSession.peer], with: .reliable)
+        }
     }
     
     deinit {

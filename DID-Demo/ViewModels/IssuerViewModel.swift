@@ -14,7 +14,7 @@ class IssuerViewModel: InteractiveViewMdoel {
         self.request = request
     }
 
-    override func trigger(didSession: DIDSession) {
+    override func trigger(didSession: DIDSession?) {
         network.api(IssueAPI(body: request), authorization: nil) { result in
             do {
                 let encoder = JSONEncoder()
@@ -22,7 +22,11 @@ class IssuerViewModel: InteractiveViewMdoel {
                     UIApplication.shared.showAlert(alert: .string(value: "Error when encode data"), nil)
                     return
                 }
-                try didSession.mcSession.send(encodedData, toPeers: [didSession.peer], with: .reliable)
+                if let didSession = didSession {
+                    try didSession.mcSession.send(encodedData, toPeers: [didSession.peer], with: .reliable)
+                } else {
+                    self.delegate?.showQRCode(url: result.url)
+                }
             } catch {
                 UIApplication.shared.showAlert(alert: .error(error: error), nil)
             }

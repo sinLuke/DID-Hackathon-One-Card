@@ -2,6 +2,7 @@
 <document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="19529" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="BYZ-38-t0r">
     <device id="retina6_1" orientation="portrait" appearance="light"/>
     <dependencies>
+        <deployment identifier="iOS"/>
         <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="19519"/>
         <capability name="Named colors" minToolsVersion="9.0"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
@@ -67,58 +68,71 @@
                                     </button>
                                 </subviews>
                             </stackView>
-                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="s61-8n-L2Y">
-                                <rect key="frame" x="30" y="114" width="354" height="220.5"/>
-                                <subviews>
-                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="IGO-2V-5Jf">
-                                        <rect key="frame" x="142.5" y="0.0" width="69" height="49"/>
-                                        <constraints>
-                                            <constraint firstAttribute="width" constant="69" id="nkI-nv-nvn"/>
-                                            <constraint firstAttribute="height" constant="49" id="tUx-6G-d5y"/>
-                                        </constraints>
-                                    </imageView>
-                                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SvT-Es-mBb">
-                                        <rect key="frame" x="57" y="65" width="240" height="12"/>
-                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
-                                        <constraints>
-                                            <constraint firstAttribute="height" constant="12" id="xna-B7-9qR"/>
-                                        </constraints>
-                                    </view>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4YI-b5-nSv">
-                                        <rect key="frame" x="105" y="93" width="144.5" height="39.5"/>
-                                        <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
-                                        <color key="textColor" name="OneCard Dark"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kC-YO-W3K">
-                                        <rect key="frame" x="29" y="148.5" width="296.5" height="72"/>
-                                        <string key="text">Welcome to OneCard
-Access personal information all in one place.</string>
-                                        <fontDescription key="fontDescription" type="system" pointSize="20"/>
-                                        <color key="textColor" name="OneCard Dark"/>
-                                        <nil key="highlightedColor"/>
-                                    </label>
-                                </subviews>
-                            </stackView>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="PLEASE IDENTIFY YOURSELF" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xbn-oB-zgS">
                                 <rect key="frame" x="20" y="468.5" width="374" height="20.5"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="17"/>
                                 <color key="textColor" name="OneCard Dark"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="8Pc-ZU-IkK">
+                                <rect key="frame" x="0.0" y="0.0" width="414" height="468.5"/>
+                                <subviews>
+                                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="center" spacing="16" translatesAutoresizingMaskIntoConstraints="NO" id="s61-8n-L2Y">
+                                        <rect key="frame" x="20" y="124" width="374" height="220.5"/>
+                                        <subviews>
+                                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="center" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="logo" translatesAutoresizingMaskIntoConstraints="NO" id="IGO-2V-5Jf">
+                                                <rect key="frame" x="152.5" y="0.0" width="69" height="49"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="width" constant="69" id="nkI-nv-nvn"/>
+                                                    <constraint firstAttribute="height" constant="49" id="tUx-6G-d5y"/>
+                                                </constraints>
+                                            </imageView>
+                                            <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="SvT-Es-mBb">
+                                                <rect key="frame" x="67" y="65" width="240" height="12"/>
+                                                <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                                <constraints>
+                                                    <constraint firstAttribute="height" constant="12" id="xna-B7-9qR"/>
+                                                </constraints>
+                                            </view>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="One Card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="4YI-b5-nSv">
+                                                <rect key="frame" x="115" y="93" width="144.5" height="39.5"/>
+                                                <fontDescription key="fontDescription" type="boldSystem" pointSize="33"/>
+                                                <color key="textColor" name="OneCard Dark"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1kC-YO-W3K">
+                                                <rect key="frame" x="39" y="148.5" width="296.5" height="72"/>
+                                                <string key="text">Welcome to OneCard
+Access personal information all in one place.</string>
+                                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                                <color key="textColor" name="OneCard Dark"/>
+                                                <nil key="highlightedColor"/>
+                                            </label>
+                                        </subviews>
+                                    </stackView>
+                                </subviews>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                                <constraints>
+                                    <constraint firstItem="s61-8n-L2Y" firstAttribute="leading" secondItem="8Pc-ZU-IkK" secondAttribute="leading" constant="20" id="28h-5W-f65"/>
+                                    <constraint firstItem="s61-8n-L2Y" firstAttribute="centerX" secondItem="8Pc-ZU-IkK" secondAttribute="centerX" id="5Ay-Tb-JJW"/>
+                                    <constraint firstAttribute="trailing" secondItem="s61-8n-L2Y" secondAttribute="trailing" constant="20" id="O6e-jy-YZh"/>
+                                    <constraint firstItem="s61-8n-L2Y" firstAttribute="centerY" secondItem="8Pc-ZU-IkK" secondAttribute="centerY" id="bAc-A4-byZ"/>
+                                </constraints>
+                            </view>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="6Tk-OE-BBY"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="bottom" secondItem="BY2-XF-StI" secondAttribute="bottom" constant="20" id="1qt-M9-cgQ"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="xbn-oB-zgS" secondAttribute="trailing" constant="20" id="83g-fT-GAe"/>
-                            <constraint firstItem="s61-8n-L2Y" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="30" id="DxT-vJ-cd5"/>
                             <constraint firstItem="xbn-oB-zgS" firstAttribute="centerX" secondItem="8bC-Xf-vdC" secondAttribute="centerX" id="EVu-4b-WOu"/>
                             <constraint firstItem="xbn-oB-zgS" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="20" id="Fpu-nz-hwi"/>
-                            <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="s61-8n-L2Y" secondAttribute="trailing" constant="30" id="MtC-x3-GQp"/>
+                            <constraint firstItem="8Pc-ZU-IkK" firstAttribute="trailing" secondItem="6Tk-OE-BBY" secondAttribute="trailing" id="GBA-yh-LFm"/>
                             <constraint firstItem="BY2-XF-StI" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" constant="19" id="PPO-VU-ia9"/>
+                            <constraint firstItem="8Pc-ZU-IkK" firstAttribute="leading" secondItem="6Tk-OE-BBY" secondAttribute="leading" id="QLC-yx-TuX"/>
+                            <constraint firstItem="8Pc-ZU-IkK" firstAttribute="top" secondItem="8bC-Xf-vdC" secondAttribute="top" id="UN3-ws-sZr"/>
                             <constraint firstItem="BY2-XF-StI" firstAttribute="top" secondItem="xbn-oB-zgS" secondAttribute="bottom" constant="32" id="bj3-OA-clD"/>
-                            <constraint firstItem="s61-8n-L2Y" firstAttribute="top" secondItem="6Tk-OE-BBY" secondAttribute="top" constant="70" id="sEU-Kp-Ev9"/>
+                            <constraint firstItem="xbn-oB-zgS" firstAttribute="top" secondItem="8Pc-ZU-IkK" secondAttribute="bottom" id="hoN-KJ-yUF"/>
                             <constraint firstItem="6Tk-OE-BBY" firstAttribute="trailing" secondItem="BY2-XF-StI" secondAttribute="trailing" constant="19" id="vc0-ic-p8z"/>
                         </constraints>
                     </view>
@@ -495,10 +509,19 @@ Access personal information all in one place.</string>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EPQ-HB-Icy">
                                 <rect key="frame" x="107" y="348" width="200" height="200"/>
+                                <subviews>
+                                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="NSW-Ta-eZR">
+                                        <rect key="frame" x="0.0" y="0.0" width="200" height="200"/>
+                                    </imageView>
+                                </subviews>
                                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                                 <constraints>
+                                    <constraint firstAttribute="trailing" secondItem="NSW-Ta-eZR" secondAttribute="trailing" id="Iii-An-rZk"/>
                                     <constraint firstAttribute="height" constant="200" id="VXt-33-Azk"/>
+                                    <constraint firstItem="NSW-Ta-eZR" firstAttribute="top" secondItem="EPQ-HB-Icy" secondAttribute="top" id="dYd-LR-d3o"/>
+                                    <constraint firstAttribute="bottom" secondItem="NSW-Ta-eZR" secondAttribute="bottom" id="gdJ-lR-kz9"/>
                                     <constraint firstAttribute="width" constant="200" id="sLd-Yt-1fr"/>
+                                    <constraint firstItem="NSW-Ta-eZR" firstAttribute="leading" secondItem="EPQ-HB-Icy" secondAttribute="leading" id="sLy-2p-Tjm"/>
                                 </constraints>
                             </view>
                             <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="HOLD CLOSE TO USER'S PHONE" textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kft-Tq-Ain" userLabel="Hold close  to user’s phone">
@@ -507,6 +530,31 @@ Access personal information all in one place.</string>
                                 <nil key="textColor"/>
                                 <nil key="highlightedColor"/>
                             </label>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Q12-bB-hEC">
+                                <rect key="frame" x="42" y="786" width="330" height="40"/>
+                                <color key="backgroundColor" name="OneCard Dark"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="40" id="1Fd-VU-dIP"/>
+                                </constraints>
+                                <color key="tintColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="CLOSE">
+                                    <fontDescription key="titleFontDescription" type="system" weight="medium" pointSize="16"/>
+                                </buttonConfiguration>
+                                <connections>
+                                    <action selector="createId:" destination="Yig-XN-O8w" eventType="touchUpInside" id="rC8-nV-Kht"/>
+                                    <action selector="done:" destination="8Xl-3M-CHW" eventType="touchUpInside" id="PXZ-sO-iMo"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="UZv-ZH-AjT">
+                                <rect key="frame" x="105" y="747" width="204" height="31"/>
+                                <color key="tintColor" name="LinkColor"/>
+                                <state key="normal" title="Button"/>
+                                <buttonConfiguration key="configuration" style="plain" title="Generate a QRCode instead"/>
+                                <connections>
+                                    <action selector="issueQRcode:" destination="8Xl-3M-CHW" eventType="touchUpInside" id="ym2-Pg-1vj"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <viewLayoutGuide key="safeArea" id="9bA-KY-0a0"/>
                         <color key="backgroundColor" systemColor="systemBackgroundColor"/>
@@ -514,19 +562,27 @@ Access personal information all in one place.</string>
                             <constraint firstItem="EPQ-HB-Icy" firstAttribute="centerY" secondItem="mIh-HM-0af" secondAttribute="centerY" id="CCR-ES-mEt"/>
                             <constraint firstItem="kft-Tq-Ain" firstAttribute="leading" secondItem="9bA-KY-0a0" secondAttribute="leading" constant="50" id="FEp-Al-ISH"/>
                             <constraint firstItem="kft-Tq-Ain" firstAttribute="centerX" secondItem="mIh-HM-0af" secondAttribute="centerX" id="Iqe-fF-7ds"/>
+                            <constraint firstItem="9bA-KY-0a0" firstAttribute="trailing" secondItem="Q12-bB-hEC" secondAttribute="trailing" constant="42" id="NFK-be-m6h"/>
                             <constraint firstItem="9bA-KY-0a0" firstAttribute="trailing" secondItem="kft-Tq-Ain" secondAttribute="trailing" constant="50" id="Ogo-bH-mUU"/>
+                            <constraint firstItem="Q12-bB-hEC" firstAttribute="leading" secondItem="9bA-KY-0a0" secondAttribute="leading" constant="42" id="PuT-KX-jix"/>
                             <constraint firstItem="EPQ-HB-Icy" firstAttribute="top" secondItem="kft-Tq-Ain" secondAttribute="bottom" constant="20" id="UgU-Xa-6yD"/>
+                            <constraint firstItem="UZv-ZH-AjT" firstAttribute="centerX" secondItem="mIh-HM-0af" secondAttribute="centerX" id="X1u-Aq-9G6"/>
+                            <constraint firstItem="Q12-bB-hEC" firstAttribute="top" secondItem="UZv-ZH-AjT" secondAttribute="bottom" constant="8" symbolic="YES" id="v8A-p3-cDt"/>
                             <constraint firstItem="EPQ-HB-Icy" firstAttribute="centerX" secondItem="mIh-HM-0af" secondAttribute="centerX" id="vcv-4x-P8q"/>
+                            <constraint firstAttribute="bottom" secondItem="Q12-bB-hEC" secondAttribute="bottom" constant="70" id="wid-nA-fzM"/>
                         </constraints>
                     </view>
                     <connections>
                         <outlet property="containerView" destination="EPQ-HB-Icy" id="Nye-tQ-6c4"/>
+                        <outlet property="doneButton" destination="Q12-bB-hEC" id="7zg-Cz-MXY"/>
                         <outlet property="messageLabel" destination="kft-Tq-Ain" id="xAx-Vm-muB"/>
+                        <outlet property="qrcodeButton" destination="UZv-ZH-AjT" id="GYa-iP-9dv"/>
+                        <outlet property="qrcodeImage" destination="NSW-Ta-eZR" id="l8Q-yc-cDK"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dTt-f8-EfX" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="2204.3478260869565" y="-455.35714285714283"/>
+            <point key="canvasLocation" x="2202.898550724638" y="-455.35714285714283"/>
         </scene>
         <!--Verifier View Controller-->
         <scene sceneID="3og-K6-1OC">
@@ -573,11 +629,11 @@ Access personal information all in one place.</string>
                                     </tableViewCell>
                                 </prototypes>
                             </tableView>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mse-Gl-Aj5">
-                                <rect key="frame" x="20" y="64" width="45" height="32"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mse-Gl-Aj5">
+                                <rect key="frame" x="20" y="64" width="49" height="32"/>
                                 <color key="tintColor" name="OneCard Dark"/>
                                 <state key="normal" title="Button"/>
-                                <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system">
+                                <buttonConfiguration key="configuration" style="plain" image="xmark" catalog="system" title=" ">
                                     <preferredSymbolConfiguration key="preferredSymbolConfigurationForImage" configurationType="font">
                                         <fontDescription key="fontDescription" type="boldSystem" pointSize="15"/>
                                     </preferredSymbolConfiguration>
@@ -781,10 +837,10 @@ Access personal information all in one place.</string>
             <color red="0.58823529411764708" green="0.58823529411764708" blue="0.58823529411764708" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="OneCard Dark">
-            <color red="0.14117647058823529" green="0.14117647058823529" blue="0.14117647058823529" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.14100000262260437" green="0.14100000262260437" blue="0.14100000262260437" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="OneCard Theme Colour 2">
-            <color red="0.12941176470588237" green="0.6705882352941176" blue="0.60784313725490191" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <color red="0.1289999932050705" green="0.67100000381469727" blue="0.60799998044967651" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
         </namedColor>
         <namedColor name="SecondaryButtonColor">
             <color red="0.97254901960784312" green="0.97254901960784312" blue="0.97254901960784312" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
